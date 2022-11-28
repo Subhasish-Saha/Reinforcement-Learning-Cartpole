@@ -24,10 +24,10 @@ for episode in range(N_episodes):
     PoleAngle = Observations[0][2]
     print(PoleAngle)
     for step in tqdm(range(N_steps)):
-        env.render()
-        print('render done')
+        # env.render()
+        # print('render done')
         action = basic_policy(PoleAngle)
-        Observation, reward, done, info = env.step(action)
+        Observation, reward, done, info,e = env.step(action)
         time.sleep(0.001)
         rewards += reward
         if done:
